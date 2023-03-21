@@ -1,5 +1,5 @@
 {% set name = "flask-talisman" %}
-{% set version = "0.7.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,8 +7,8 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 468131464a249274ed226efc21b372518f442487e58918ccab8357eaa638fd1f
-  - url: https://raw.githubusercontent.com/GoogleCloudPlatform/flask-talisman/v{{ version }}/LICENSE 
+    sha256: 205d3de7c5ecfad667c84123f5fbe580b1f68cd9a1b058d7353cc0348e15b1bf
+  - url: https://raw.githubusercontent.com/wntrblm/flask-talisman/v{{ version }}/LICENSE 
     sha256: c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4
 
 build:
@@ -19,10 +19,9 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.5
   run:
-    - python
-    - six >=1.9.0
+    - python >=3.5
     - flask
 
 test:
@@ -47,3 +46,4 @@ about:
 extra:
   recipe-maintainers:
     - sodre
+    - xmnlab
