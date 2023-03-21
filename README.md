@@ -150,4 +150,5 @@ Feedstock Maintainers
 =====================
 
 * [@sodre](https://github.com/sodre/)
+* [@xmnlab](https://github.com/xmnlab/)
 
