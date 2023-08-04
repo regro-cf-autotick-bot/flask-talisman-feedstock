@@ -1,5 +1,5 @@
 {% set name = "flask-talisman" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 205d3de7c5ecfad667c84123f5fbe580b1f68cd9a1b058d7353cc0348e15b1bf
-  - url: https://raw.githubusercontent.com/wntrblm/flask-talisman/v{{ version }}/LICENSE 
+    sha256: c5f486f5f54420729f84b3c3850cd63f96e8b033a9629bee66c524ea363797ff
+  - url: https://raw.githubusercontent.com/wntrblm/flask-talisman/v{{ version }}/LICENSE
     sha256: c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -31,7 +31,7 @@ test:
     - flask_talisman
 
 about:
-  home: "https://github.com/GoogleCloudPlatform/flask-talisman"
+  home: https://github.com/GoogleCloudPlatform/flask-talisman
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
